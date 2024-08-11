@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.DatePicker;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.andexert.library.RippleView;
 import com.google.android.material.snackbar.Snackbar;
 import com.hris365.R;
 import com.hris365.databinding.FragmentNewClaimBinding;
@@ -56,7 +56,7 @@ import okhttp3.RequestBody;
  * Created by Yudiz on 07/10/16.
  */
 @SuppressLint("ValidFragment")
-public class NewClaimsFragment extends BaseFragment implements View.OnClickListener, RippleView.OnRippleCompleteListener, OnBackPressListerner, OnApiResponseListner {
+public class NewClaimsFragment extends BaseFragment implements View.OnClickListener, OnBackPressListerner, OnApiResponseListner {
 
     private final Claim claim;
     private FragmentNewClaimBinding mBinding;
@@ -136,53 +136,71 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                     if (!mBinding.fragmentNewClaimTvFormDate.getText().toString().trim().equals("")) {
                         Calendar start = Utility.getFormatedDate(mBinding.fragmentNewClaimTvFormDate.getText().toString().trim(), Constants.DATE_FORMAT1);
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
-                        Utility.showDateDialog(getFragmentManager(), 1, 0, cal.get(Calendar.YEAR) - 50, end.get(Calendar.DAY_OF_MONTH), end.get(Calendar.MONTH), end.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvFormDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                fromdate = dialog.getFormattedDate(format2);
-                            }
-                        }, start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH));
+                        Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, end.get(Calendar.DAY_OF_MONTH),
+                                end.get(Calendar.MONTH), end.get(Calendar.YEAR), start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH),
+                                new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvFormDate.setText(date1);
+                                        fromdate =getFormattedDate(mCalendar);
+                                    }
+                                });
+
                     } else {
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
-                        Utility.showDateDialog(getFragmentManager(), 1, 1, cal.get(Calendar.YEAR) - 50, end.get(Calendar.DAY_OF_MONTH), end.get(Calendar.MONTH), end.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvFormDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                fromdate = dialog.getFormattedDate(format2);
-                            }
-                        }, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
+                        Utility.showDateDialogNew(getActivity(), 1, 1, cal.get(Calendar.YEAR) - 50, end.get(Calendar.DAY_OF_MONTH), end.get(Calendar.MONTH), end.get(Calendar.YEAR),
+                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvFormDate.setText(date1);
+                                        fromdate = getFormattedDate(mCalendar);
+                                    }
+                                });
                     }
                 } else {
                     if (!mBinding.fragmentNewClaimTvFormDate.getText().toString().trim().equals("")) {
                         Calendar start = Utility.getFormatedDate(mBinding.fragmentNewClaimTvFormDate.getText().toString().trim(), Constants.DATE_FORMAT1);
-                        Utility.showDateDialog(getFragmentManager(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvFormDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                fromdate = dialog.getFormattedDate(format2);
-                            }
-                        }, start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH));
+                        Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
+                                start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvFormDate.setText(date1);
+                                        fromdate = getFormattedDate(mCalendar);
+                                    }
+                                });
                     } else {
-                        Utility.showDateDialog(getFragmentManager(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvFormDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                fromdate = dialog.getFormattedDate(format2);
-                            }
-                        }, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
+                        Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
+                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvFormDate.setText(date1);
+                                        fromdate = getFormattedDate(mCalendar);
+                                    }
+                                });
                     }
                 }
             }
@@ -197,54 +215,71 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                         Calendar start = Utility.getFormatedDate(mBinding.fragmentNewClaimTvFormDate.getText().toString().trim(), Constants.DATE_FORMAT1);
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
 
-                        Utility.showDateDialog(getFragmentManager(), start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvToDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                todate = dialog.getFormattedDate(format2);
-                            }
-                        }, end.get(Calendar.YEAR), end.get(Calendar.MONTH), end.get(Calendar.DAY_OF_MONTH));
+                        Utility.showDateDialogNew(getActivity(), start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
+                                end.get(Calendar.YEAR), end.get(Calendar.MONTH), end.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvToDate.setText(date1);
+                                        todate = getFormattedDate(mCalendar);
+                                    }
+                                });
                     } else {
                         Calendar start = Utility.getFormatedDate(mBinding.fragmentNewClaimTvFormDate.getText().toString().trim(), Constants.DATE_FORMAT1);
 
-                        Utility.showDateDialog(getFragmentManager(), start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvToDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                todate = dialog.getFormattedDate(format2);
-                            }
-                        }, start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH));
+                        Utility.showDateDialogNew(getActivity(), start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
+                                start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvToDate.setText(date1);
+                                        todate = getFormattedDate(mCalendar);
+                                    }
+                                });
                     }
                 } else {
                     if (!mBinding.fragmentNewClaimTvToDate.getText().toString().trim().equals("")) {
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
-                        Utility.showDateDialog(getFragmentManager(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvToDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                todate = dialog.getFormattedDate(format2);
-                            }
-                        }, end.get(Calendar.YEAR), end.get(Calendar.MONTH), end.get(Calendar.DAY_OF_MONTH));
+
+                        Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
+                                end.get(Calendar.YEAR), end.get(Calendar.MONTH), end.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvToDate.setText(date1);
+                                        todate = getFormattedDate(mCalendar);
+                                    }
+                                });
                     } else {
-                        Utility.showDateDialog(getFragmentManager(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new OnDateDialogListener() {
-                            @Override
-                            public void onPositiveActionClicked(DatePickerDialog dialog) {
-                                SimpleDateFormat format = new SimpleDateFormat(Constants.DATE_FORMAT1);
-                                String date1 = dialog.getFormattedDate(format);
-                                mBinding.fragmentNewClaimTvToDate.setText(date1);
-                                SimpleDateFormat format2 = new SimpleDateFormat(Constants.DATE_FORMAT);
-                                todate = dialog.getFormattedDate(format2);
-                            }
-                        }, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH));
+                        Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
+                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                    @Override
+                                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                                        Calendar mCalendar = Calendar.getInstance();
+                                        mCalendar.set(Calendar.YEAR, year);
+                                        mCalendar.set(Calendar.MONTH, month);
+                                        mCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                                        String date1 = getFormattedDate(mCalendar);
+                                        mBinding.fragmentNewClaimTvToDate.setText(date1);
+                                        todate = getFormattedDate(mCalendar);
+                                    }
+                                });
                     }
                 }
             }
@@ -370,7 +405,15 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
         mBinding.fragmentNewClaimRv.setLayoutManager(new LinearLayoutManager(getActivity()));
         mBinding.fragmentNewClaimRv.setAdapter(claimAdapter);
         mBinding.fragmentNewClaimRv.setItemAnimator(new FadeInUpAnimator());
-        mBinding.fragmentNewClaimRvSubmit.setOnRippleCompleteListener(this);
+        mBinding.fragmentNewClaimTvSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkValidation()) {
+                    SetCLaimData();
+
+                }
+            }
+        });
 
     }
 
@@ -439,27 +482,6 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                 break;
         }
     }
-
-    @Override
-    public void onComplete(RippleView rippleView) {
-/*
-        ExpenseClaim.setDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim());
-        ExpenseClaim.setStatus("Rejected");
-        ExpenseClaim.setSubmitted("100");
-        ExpenseClaim.setApproval("100");
-        ExpenseClaim.setClaimDetails(claimDetailsList);
-        if (onBackPressListerner != null)
-            onBackPressListerner.onBackPressListerner(ExpenseClaim);
-*/
-//
-
-        if (checkValidation()) {
-            SetCLaimData();
-
-        }
-
-    }
-
 
     private void SetCLaimData() {
         if (claimchoosentype == ClaimRequestType.TRAVELSELECTED) {

@@ -35,18 +35,11 @@
 
         </LinearLayout>
 
-        <com.andexert.library.RippleView
-            android:id="@+id/fragment_claims_rv_new_claims"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <hrms.hrms.widget.TextView
+            android:id="@+id/fragment_claims_tv_new_claims"
+            style="@style/btn_submit"
             android:layout_alignParentBottom="true"
-            app:rv_rippleDuration="200">
-
-            <hrms.hrms.widget.TextView
-                android:id="@+id/fragment_claims_tv_new_claims"
-                style="@style/btn_submit"
-                android:text="@string/new_claim"
-                android:textAllCaps="true" />
-        </com.andexert.library.RippleView>
+            android:text="@string/new_claim"
+            android:textAllCaps="true" />
     </RelativeLayout>
 </layout>

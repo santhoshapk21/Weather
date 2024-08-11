@@ -56,9 +56,9 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_weight="1"
                         android:checked="true"
                         android:text="@string/metro" />
@@ -67,9 +67,9 @@
                         android:id="@+id/rbtn_nonmetro"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginLeft="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_weight="1"
                         android:text="@string/non_metro" />
                 </RadioGroup>
@@ -105,8 +105,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginRight="@dimen/_12sdp"
                             android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
                             android:background="@drawable/bottomline">
 
                             <hrms.hrms.widget.EditText
@@ -146,8 +146,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/_12sdp"
-                            android:layout_marginRight="@dimen/_12sdp"
                             android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
                             android:background="@drawable/bottomline">
 
                             <hrms.hrms.widget.EditText
@@ -184,7 +184,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_70sdp"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -203,8 +203,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_12sdp"
-                        android:layout_marginRight="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
                         android:background="@drawable/bottomline">
 
                         <hrms.hrms.widget.TextView
@@ -238,8 +238,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/_12sdp"
-                        android:layout_marginRight="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
                         android:background="@drawable/bottomline">
 
                         <hrms.hrms.widget.TextView
@@ -554,16 +554,11 @@
                 </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
 
-            <com.andexert.library.RippleView
-                android:id="@+id/fragment_new_claim_rv_submit"
-                style="@style/RippleEffect">
-
-                <hrms.hrms.widget.TextView
-                    android:id="@+id/fragment_new_claim_tv_submit"
-                    style="@style/btn_submit"
-                    android:text="@string/submit"
-                    android:textAllCaps="true" />
-            </com.andexert.library.RippleView>
+            <hrms.hrms.widget.TextView
+                android:id="@+id/fragment_new_claim_tv_submit"
+                style="@style/btn_submit"
+                android:text="@string/submit"
+                android:textAllCaps="true" />
         </LinearLayout>
 
     </ScrollView>

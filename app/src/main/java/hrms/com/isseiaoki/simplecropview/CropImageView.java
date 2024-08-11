@@ -30,6 +30,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.hris365.R;
 
@@ -59,7 +60,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.functions.Action;
 import io.reactivex.rxjava3.functions.Consumer;
 
-@SuppressWarnings("unused") public class CropImageView extends androidx.appcompat.widget.AppCompatImageView {
+@SuppressWarnings("unused") public class CropImageView extends AppCompatImageView {
   private static final String TAG = CropImageView.class.getSimpleName();
 
   // Constants ///////////////////////////////////////////////////////////////////////////////////

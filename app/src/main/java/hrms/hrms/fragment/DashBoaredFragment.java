@@ -237,6 +237,7 @@ public class DashBoaredFragment extends BaseFragment implements View.OnClickList
                 break;
             case 2:
                 addFragment(new ClaimsFragment(), getString(R.string.claims));
+                break;
             case 3:
                 addFragment(new ShiftChangeFragment(), getString(R.string.shift_change));
                 break;

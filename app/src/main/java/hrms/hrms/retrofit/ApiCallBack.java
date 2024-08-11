@@ -2,6 +2,7 @@ package hrms.hrms.retrofit;
 
 import android.content.Intent;
 import android.os.Build;
+import android.util.Log;
 import android.widget.Toast;
 
 import hrms.hrms.activity.HomeActivity;
@@ -27,6 +28,9 @@ public class ApiCallBack implements Callback {
 
     @Override
     public void onResponse(Call call, Response response) {
+        Log.e("ApiCallRequest:....",call.request().toString());
+        Log.e("ApiCallResponse:....",response.toString());
+
             if (isSuccessfull(response)) {
             if (onApiResponseListner != null)
                 onApiResponseListner.onResponseComplete(response.body(), requestCode, response.code());

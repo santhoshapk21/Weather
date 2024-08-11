@@ -11,7 +11,6 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.andexert.library.RippleView;
 import com.google.android.material.snackbar.Snackbar;
 import com.hris365.R;
 import com.hris365.databinding.FragmentClaimsBinding;
@@ -36,7 +35,7 @@ import retrofit2.Call;
 /**
  * Created by Yudiz on 07/10/16.
  */
-public class ClaimsFragment extends BaseFragment implements View.OnClickListener, RippleView.OnRippleCompleteListener, OnApiResponseListner {
+public class ClaimsFragment extends BaseFragment implements View.OnClickListener, OnApiResponseListner {
 
     private FragmentClaimsBinding mBinding;
     private ClaimAdapter claimAdapter;
@@ -128,11 +127,6 @@ public class ClaimsFragment extends BaseFragment implements View.OnClickListener
         mBinding.fragmentClaimsRv.setLayoutManager(new LinearLayoutManager(getActivity()));
         mBinding.fragmentClaimsRv.setAdapter(new ScaleInAnimationAdapter(claimAdapter));
         mBinding.fragmentClaimsRv.setItemAnimator(new FadeInUpAnimator());
-        mBinding.fragmentClaimsRvNewClaims.setOnRippleCompleteListener(this);
-    }
-
-    @Override
-    public void onComplete(RippleView rippleView) {
     }
 
 //    @Override
