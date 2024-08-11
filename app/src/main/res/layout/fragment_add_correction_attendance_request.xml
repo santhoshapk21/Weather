@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_12sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/spinnerHeader"
+                        android:text="@string/str_correction_text" />
+
+                    <RelativeLayout style="@style/SpinnerRl">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/attendance_request_spn_name"
+                            style="@style/Spinner"
+                            android:layout_width="@dimen/_140sdp">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_12sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/spinnerHeader"
+                        android:text="@string/str_date" />
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_attendance_request_rl_form_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/bottomline">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/fragment_attendance_request_tv_form_date"
+                            style="@style/SpinnerBody"
+                            android:text=""></hrms.hrms.widget.TextView>
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_calendar" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/spinnerHeader"
+                        android:text="@string/str_time" />
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_attendance_request_rl_tv_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/bottomline">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/fragment_attendance_request_tv_time"
+                            style="@style/SpinnerBody"
+                            android:text="" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_clock" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp">
+
+                <com.rey.material.widget.CheckBox
+                    android:id="@+id/fragment_attendance_request_cb_next_day_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/str_next_day_out"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:font_type="@string/gotham_medium"/>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/linearDescription">
+
+                <hrms.hrms.widget.TextView
+                    style="@style/spinnerHeader"
+                    android:text="@string/description" />
+
+                <hrms.hrms.widget.EditText
+                    android:id="@+id/fragment_attendance_request_et_desc"
+                    style="@style/spinnerBodyMultiline"
+                    android:hint="@string/str_enter_description">
+
+                </hrms.hrms.widget.EditText>
+
+            </LinearLayout>
+
+            <hrms.hrms.widget.TextView
+                android:layout_marginTop="@dimen/_15sdp"
+                android:id="@+id/fragment_attendance_request_tv_submit"
+                style="@style/btn_submit"
+                android:text="@string/submit"
+                android:textAllCaps="true" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

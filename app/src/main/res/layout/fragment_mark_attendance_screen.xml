@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/frg_mark_attendance_sv_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/home_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/_12sdp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:background="@color/home_bg">
+
+                    <FrameLayout
+                        android:id="@+id/frg_mark_attendance_fl_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_160sdp"
+                        android:background="@color/home_bg"
+                        android:nestedScrollingEnabled="true" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_160sdp"
+                        android:background="@color/black_trans_five"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+
+                    <hrms.hrms.widget.CircleImageView
+                        android:id="@+id/iv_gps_current_location"
+                        app:border_color="@color/colorAccent"
+                        app:border_width="1dp"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:src="@drawable/ic_gps_get_location" />
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:minHeight="@dimen/_45sdp"
+                    android:padding="@dimen/_4sdp">
+
+                    <ImageView
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:src="@drawable/ic_pin_location" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:gravity="center|left"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_12sdp"
+                            android:text="@string/str_location"
+                            android:textColor="#A7A7A7"
+                            android:textSize="@dimen/_9sdp"
+                            app:font_type="@string/gotham_light" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_mark_attendance_tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:singleLine="true"
+                            android:text="@string/str_location"
+                            android:textColor="#5E5E5E"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_type="@string/gotham_light" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:minHeight="@dimen/_45sdp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/frg_mark_attendance_ll_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:gravity="center|left"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_75sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/ic_round_plus" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_mark_attendance_tv_camera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:singleLine="true"
+                            android:text="@string/str_upload_photo"
+                            android:textColor="#5E5E5E"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_type="@string/gotham_light" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frg_mark_attendance_fl_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/frg_mark_attendance_iv_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_round_plus" />
+
+                        <ImageView
+                            android:id="@+id/frg_mark_attendance_iv_cancel"
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_gravity="right|top"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_close" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginTop="@dimen/_12sdp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            style="@style/spinnerHeader"
+                            android:text="@string/str_date" />
+
+                        <RelativeLayout
+                            android:id="@+id/fragment_mark_attendance_rl_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:background="@drawable/bottomline">
+
+                            <hrms.hrms.widget.TextView
+                                android:id="@+id/fragment_mark_attendance_tv_date"
+                                style="@style/SpinnerBody"
+                                android:text=""
+                                android:textColor="#5E5E5E"
+                                app:font_type="@string/gotham_light"></hrms.hrms.widget.TextView>
+
+                            <ImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentRight="true"
+                                android:padding="@dimen/_6sdp"
+                                android:src="@drawable/ic_calendar" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            style="@style/spinnerHeader"
+                            android:text="@string/str_time" />
+
+                        <RelativeLayout
+                            android:id="@+id/fragment_mark_attendance_rv_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:background="@drawable/bottomline">
+
+                            <hrms.hrms.widget.TextView
+                                android:id="@+id/fragment_mark_attendance_tv_time"
+                                style="@style/SpinnerBody"
+                                android:text=""
+                                android:textColor="#5E5E5E"
+                                app:font_type="@string/gotham_light" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentRight="true"
+                                android:padding="@dimen/_6sdp"
+                                android:src="@drawable/ic_clock" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linearDescription">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/spinnerHeader"
+                        android:text="@string/description" />
+
+                    <hrms.hrms.widget.EditText
+                        android:id="@+id/fragment_mark_attendance_tv_desc"
+                        style="@style/spinnerBodyMultiline"
+                        android:layout_height="match_parent"
+                        android:hint="@string/str_enter_description"
+                        android:maxHeight="@dimen/_100sdp"
+
+                        android:nestedScrollingEnabled="true">
+
+                    </hrms.hrms.widget.EditText>
+
+                </LinearLayout>
+
+                <hrms.hrms.widget.TextView
+                    android:id="@+id/fragment_mark_attendance_tv_submit"
+                    style="@style/btn_submit"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text=""
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

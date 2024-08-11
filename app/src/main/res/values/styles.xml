@@ -1,0 +1,333 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="FadeInPopWin">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowEnterAnimation">@anim/pop_win_content_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_win_content_fade_out</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+
+
+    <style name="MonthTitle">
+        <item name="android:textSize">@dimen/roboto_calendar_date_title_font</item>
+        <item name="android:textColor">@color/roboto_calendar_date_title</item>
+        <item name="fontPath">fonts/Roboto-Regular.ttf</item>
+    </style>
+
+    <style name="DayOfTheWeek">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/background</item>
+        <item name="font_type">@string/medium</item>
+    </style>
+
+    <style name="DayOfTheMonth">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="font_type">@string/gotham</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/login_tv_hint</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AccentRegular">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="HomeTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+
+    <style name="login_edittext">
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:textColorHint">@color/login_tv_hint</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="font_type">@string/gotham_light</item>
+
+    </style>
+
+    <style name="login_textview">
+        <item name="android:singleLine">true</item>
+        <item name="font_type">@string/gotham_book</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:textColor">@color/login_tv_hint</item>
+    </style>
+
+    <style name="annual_leave_bottom_text">
+        <item name="android:padding">@dimen/_2sdp</item>
+        <item name="font_type">@string/gotham_book</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/tv_gray_medium</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogTheme" parent="@android:style/Theme.Translucent.NoTitleBar" />
+
+    <style name="Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="rbd_radius">@dimen/_5sdp</item>
+        <item name="rbd_strokeColor">@color/roboto_calendar_current_day_of_month</item>
+        <item name="rbd_innerRadius">@dimen/_3sdp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="RadioButton.RequestDialog" parent="Material.Drawable.RadioButton">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">@dimen/_25sdp</item>
+        <item name="android:layout_height">@dimen/_25sdp</item>
+    </style>
+
+    <style name="TextViewRequestDialog">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="font_type">@string/gotham_book</item>
+    </style>
+
+    <style name="animation_style">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
+    <style name="table_title_bg">
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/bottomline</item>
+    </style>
+
+    <style name="table_title_text">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="font_type">@string/gotham_medium</item>
+    </style>
+
+    <style name="btn_submit">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="font_type">@string/gotham_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="rd_style">@style/Material.Drawable.Ripple.Wave</item>
+    </style>
+
+    <style name="Spinner" parent="Material.Widget.Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:dropDownWidth">match_parent</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="rd_style">@style/Material.Drawable.Ripple.Wave</item>
+        <item name="spn_arrowAnimClockwise">true</item>
+        <item name="spn_dividerColor">@android:color/transparent</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="SpinnerRl">
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:layout_marginRight">@dimen/_12sdp</item>
+        <item name="android:layout_marginLeft">@dimen/_4sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_25sdp</item>
+
+    </style>
+
+    <style name="SpinnerBody">
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="font_type">@string/gotham_book</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+
+    </style>
+
+    <style name="spinnerHeader">
+        <item name="android:layout_marginLeft">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/login_tv_hint</item>
+        <item name="font_type">@string/gotham_light</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+    </style>
+
+    <style name="spinnerBodyMultiline">
+        <item name="android:singleLine">true</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:layout_marginLeft">@dimen/_10sdp</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:minLines">6</item>
+        <item name="android:maxLines">10</item>
+        <item name="android:lines">10</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="font_type">@string/gotham_book</item>
+        <item name="android:focusable">true</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+
+    <style name="singleline">
+        <item name="android:singleLine">true</item>
+        <item name="android:cursorVisible">true</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:layout_marginTop">@dimen/_8sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="font_type">@string/gotham_book</item>
+        <item name="android:focusable">true</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+
+    <style name="linearDescription">
+        <item name="android:layout_marginTop">@dimen/_12sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="profile_edittext">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:enabled">false</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:textColor">@color/contact_desc</item>
+        <item name="font_type">@string/gotham_book</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+    <style name="edit_profile_edittext">
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+        <item name="android:textColor">@color/contact_desc</item>
+        <item name="font_type">@string/gotham_book</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+
+    <style name="profile_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/contact_title</item>
+        <item name="font_type">@string/gotham_book</item>
+    </style>
+
+    <style name="RippleEffect">
+        <item name="rv_rippleDuration">300</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/_10sdp</item>
+    </style>
+
+
+    <style name="RippleEffectMenu">
+        <item name="rv_centered">true</item>
+        <item name="rv_color">#6000</item>
+        <item name="rv_rippleDuration">200</item>
+        <item name="rv_zoomScale">2</item>
+    </style>
+
+    <style name="dialog_theme" parent="android:Theme.Light.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView">
+        <item name="minWidth">48dip</item>
+        <item name="maxWidth">48dip</item>
+        <item name="minHeight">48dip</item>
+        <item name="maxHeight">48dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Large">
+        <item name="minWidth">76dip</item>
+        <item name="maxWidth">76dip</item>
+        <item name="minHeight">76dip</item>
+        <item name="maxHeight">76dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+    <style name="AVLoadingIndicatorView.Small">
+        <item name="minWidth">24dip</item>
+        <item name="maxWidth">24dip</item>
+        <item name="minHeight">24dip</item>
+        <item name="maxHeight">24dip</item>
+        <item name="indicatorName">BallPulseIndicator</item>
+    </style>
+
+</resources>

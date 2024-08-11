@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:tag="weekRow3"
+    android:weightSum="7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer15">
+
+        <RelativeLayout
+            android:layout_width="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_centerInParent="true"
+            android:tag="dayOfMonthBackground15" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <hrms.hris365.calendar.TextViewCalendar
+                style="@style/DayOfTheMonth"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:gravity="center"
+                android:tag="dayOfMonthText15"
+                android:text="15"
+                android:textSize="@dimen/text_size" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/roboto_calendar_blue"
+                android:tag="firstUnderlineView15" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer16">
+
+        <RelativeLayout
+            android:layout_width="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_centerInParent="true"
+            android:tag="dayOfMonthBackground16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <hrms.hris365.calendar.TextViewCalendar
+                style="@style/DayOfTheMonth"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:gravity="center"
+                android:tag="dayOfMonthText16"
+                android:text="16"
+                android:textSize="@dimen/text_size" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/roboto_calendar_blue"
+                android:tag="firstUnderlineView16" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer17">
+
+        <RelativeLayout
+            android:layout_width="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_centerInParent="true"
+            android:tag="dayOfMonthBackground17" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <hrms.hris365.calendar.TextViewCalendar
+                style="@style/DayOfTheMonth"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:gravity="center"
+                android:tag="dayOfMonthText17"
+                android:text="17"
+                android:textSize="@dimen/text_size" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/roboto_calendar_blue"
+                android:tag="firstUnderlineView17" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer18">
+
+        <RelativeLayout
+            android:layout_width="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_centerInParent="true"
+            android:tag="dayOfMonthBackground18" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <hrms.hris365.calendar.TextViewCalendar
+                style="@style/DayOfTheMonth"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:gravity="center"
+                android:tag="dayOfMonthText18"
+                android:text="18"
+                android:textSize="@dimen/text_size" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/roboto_calendar_blue"
+                android:tag="firstUnderlineView18" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer19">
+
+        <RelativeLayout
+            android:layout_width="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_centerInParent="true"
+            android:tag="dayOfMonthBackground19" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <hrms.hris365.calendar.TextViewCalendar
+                style="@style/DayOfTheMonth"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:gravity="center"
+                android:tag="dayOfMonthText19"
+                android:text="19"
+                android:textSize="@dimen/text_size" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/roboto_calendar_blue"
+                android:tag="firstUnderlineView19" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer20">
+
+        <RelativeLayout
+            android:layout_width="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_centerInParent="true"
+            android:tag="dayOfMonthBackground20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <hrms.hris365.calendar.TextViewCalendar
+                style="@style/DayOfTheMonth"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:gravity="center"
+                android:tag="dayOfMonthText20"
+                android:text="20"
+                android:textSize="@dimen/text_size" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/roboto_calendar_blue"
+                android:tag="firstUnderlineView20" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer21">
+
+        <RelativeLayout
+            android:layout_width="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+            android:layout_centerInParent="true"
+            android:tag="dayOfMonthBackground21" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <hrms.hris365.calendar.TextViewCalendar
+                style="@style/DayOfTheMonth"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:gravity="center"
+                android:tag="dayOfMonthText21"
+                android:text="21"
+                android:textSize="@dimen/text_size" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/roboto_calendar_blue"
+                android:tag="firstUnderlineView21" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

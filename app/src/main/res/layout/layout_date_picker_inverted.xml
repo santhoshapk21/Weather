@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000">
+
+    <LinearLayout
+        android:id="@+id/container_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f7fa"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f2f7fa"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp">
+
+                <hrms.hris365.pickerview.LoopView
+                    android:id="@+id/picker_day"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <hrms.hris365.pickerview.LoopView
+                    android:id="@+id/picker_month"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1" />
+
+                <hrms.hris365.pickerview.LoopView
+                    android:id="@+id/picker_year"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:padding="@dimen/_4sdp"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp"
+                tools:text="@string/str_cancel" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/btn_text_size"
+                android:layout_weight="1"
+                android:background="@null"
+                android:padding="@dimen/_4sdp"
+                android:textColor="#000000"
+                android:textSize="@dimen/_12sdp"
+                tools:text="@string/str_confirm" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

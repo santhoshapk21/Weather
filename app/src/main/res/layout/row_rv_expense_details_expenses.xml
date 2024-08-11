@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="@dimen/_2sdp">
+
+
+                <hrms.hrms.widget.TextView
+                    android:id="@+id/row_rv_expense_detail_tv_expense_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_type="@string/gotham_book"
+                    tools:text="Food" />
+
+
+                <LinearLayout
+                    android:id="@+id/row_rv_expense_detail_ll_description_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_6sdp">
+
+
+                    <hrms.hrms.widget.TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/_4sdp"
+                        android:text="Description :"
+                        android:textAlignment="center"
+                        android:textColor="@color/request_leave_type_text"
+                        android:textSize="@dimen/_9sdp"
+                        app:font_type="@string/gotham_book" />
+
+
+                    <hrms.hrms.widget.TextView
+                        android:id="@+id/row_rv_expense_detail_tv_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:textColor="@color/request_leave_heading_text"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="@string/gotham_book"
+                        tools:text="adsgdfg" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/row_rv_expense_detail_ll_receipt_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_6sdp">
+
+
+                    <hrms.hrms.widget.TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:text="@string/receipt_number"
+                        android:textColor="@color/request_leave_type_text"
+                        android:textSize="@dimen/_9sdp"
+                        app:font_type="@string/gotham_book" />
+
+
+                    <hrms.hrms.widget.TextView
+                        android:id="@+id/row_rv_expense_detail_tv_receipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:textColor="@color/request_leave_heading_text"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_type="@string/gotham_book"
+                        tools:text="123456" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:gravity="center">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_4sdp"
+                            android:text="Requested Amount"
+                            android:textColor="@color/request_leave_type_text"
+                            android:textSize="@dimen/_9sdp"
+                            app:font_type="@string/gotham_book" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/row_rv_expense_detail_tv_requested_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/_4sdp"
+                            android:textColor="@color/request_leave_heading_text"
+                            android:textSize="@dimen/_12sdp"
+                            app:font_type="@string/gotham_book"
+                            tools:text="100" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_4sdp"
+                            android:text="@string/eligible_amount"
+                            android:textColor="@color/request_leave_type_text"
+                            android:textSize="@dimen/_9sdp"
+                            app:font_type="@string/gotham_book" />
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottomline">
+
+                            <hrms.hrms.widget.EditText
+                                android:id="@+id/row_rv_expense_detail_et_amount"
+                                style="@style/SpinnerBody"
+                                android:hint="@string/_100"
+                                android:inputType="number"
+                                android:paddingLeft="@dimen/_4sdp"
+                                android:paddingStart="@dimen/_4sdp"
+                                android:textColor="@color/request_leave_heading_text"
+                                android:textSize="@dimen/_12sdp"
+                                app:font_type="@string/gotham_book"
+                                tools:ignore="RtlSymmetry" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/row_rv_expense_detail_ll_attachment_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_4sdp"
+                        android:text="@string/attachment"
+                        android:textColor="@color/request_leave_type_text"
+                        android:textSize="@dimen/_9sdp"
+                        app:font_type="@string/gotham_book" />
+
+
+                    <ImageView
+                        android:id="@+id/row_rv_expense_detail_iv_attachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_75sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/ic_profile_bg">
+
+                    </ImageView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/ic_edit"
+            tools:targetApi="lollipop"
+            app:tint="@color/blue" />
+
+    </FrameLayout>
+
+</layout>

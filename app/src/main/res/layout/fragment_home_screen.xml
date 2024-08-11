@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_2sdp"
+        android:elevation="0dp"
+        android:background="@color/home_bg">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            app:elevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+
+                >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:visibility="invisible"
+                    android:background="@drawable/ic_profile_bg" />
+
+                <FrameLayout
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:background="@color/home_bg"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:background="@drawable/ic_profile_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_home_tv_name"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_30sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:text=""
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp"
+                            app:font_type="@string/gotham_medium" />
+
+                        <hrms.hrms.widget.TextView
+                            android:gravity="center"
+                            android:id="@+id/frg_home_tv_dept"
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:text=""
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_type="@string/gotham_medium" />
+
+                    </LinearLayout>
+
+                    <hrms.hrms.widget.CircleImageView
+                        android:id="@+id/frg_home_iv_profile_image"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/circle_white_background"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/ic_profile_bg_circle" />
+
+                </FrameLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:splitMotionEvents="false"
+            android:id="@+id/frg_home_rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <hrms.hrms.widget.CircleImageView
+            android:id="@+id/frg_home_iv_attandance"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="end|bottom"
+            android:visibility="gone"
+            android:src="@drawable/ic_mark_attendance" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

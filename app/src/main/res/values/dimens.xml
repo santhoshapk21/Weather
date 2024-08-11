@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="btn_text_size">16sp</dimen>
+    <dimen name="view_text_size">10sp</dimen>
+
+    <!-- dateTitleLayout -->
+    <dimen name="roboto_calendar_date_title_font">14sp</dimen>
+    <dimen name="roboto_calendar_date_title_padding_bottom">5dp</dimen>
+
+    <!-- weekLayout -->
+    <dimen name="roboto_calendar_day_of_week_font">14sp</dimen>
+
+    <!-- weekRowLayout -->
+    <dimen name="roboto_calendar_week_bottom_padding">5dp</dimen>
+
+    <dimen name="roboto_calendar_week_image_size">@dimen/_30sdp</dimen>
+
+    <!-- Day of the month -->
+    <dimen name="roboto_calendar_underline_weight">@dimen/_6sdp</dimen>
+    <dimen name="roboto_calendar_underline_height">@dimen/_2sdp</dimen>
+    <dimen name="roboto_calendar_day_of_month_background_size">@dimen/_32sdp</dimen>
+    <dimen name="roboto_calendar_day_of_month_indicator_size">@dimen/_3sdp</dimen>
+    <dimen name="roboto_calendar_day_of_month_image_margin_top">@dimen/_20sdp</dimen>
+    <dimen name="roboto_calendar_padding">@dimen/_8sdp</dimen>
+    <dimen name="roboto_calendar_padding_minus">@dimen/_minus16sdp</dimen>
+    <dimen name="text_size">@dimen/_12sdp</dimen>
+</resources>

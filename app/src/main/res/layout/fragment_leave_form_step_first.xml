@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg"
+        android:clickable="true"
+        android:padding="@dimen/_12sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/spinnerHeader"
+                        android:text="@string/leave_code" />
+
+                    <RelativeLayout style="@style/SpinnerRl">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/leave_form_spn_leave_code"
+                            style="@style/Spinner">
+
+                        </androidx.appcompat.widget.AppCompatSpinner>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginTop="@dimen/_12sdp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/spinnerHeader"
+                        android:text="@string/from_date" />
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_leave_form_rl_form_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/bottomline">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/fragment_leave_form_tv_form_date"
+                            style="@style/SpinnerBody"
+                            android:text="13-10-1992"></hrms.hrms.widget.TextView>
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_calendar" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/spinnerHeader"
+                        android:text="@string/to_date" />
+
+                    <RelativeLayout
+                        android:id="@+id/fragment_leave_form_rl_to_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginRight="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/bottomline">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/fragment_leave_form_tv_to_date"
+                            style="@style/SpinnerBody"
+                            android:text="13-10-1992" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/_4sdp"
+                            android:src="@drawable/ic_calendar" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout style="@style/table_title_bg">
+
+                    <hrms.hrms.widget.TextView
+                        style="@style/table_title_text"
+                        android:text="@string/leave_details" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_leave_form_tv_taken"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="@dimen/_25sdp"
+                            app:font_type="@string/gotham_medium" />
+
+                        <hrms.hrms.widget.TextView
+                            style="@style/annual_leave_bottom_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/taken" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@color/view_line" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_leave_form_tv_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20"
+                            android:textSize="@dimen/_25sdp"
+                            app:font_type="@string/gotham_medium" />
+
+                        <hrms.hrms.widget.TextView
+                            style="@style/annual_leave_bottom_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/balance" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@color/view_line" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_leave_form_tv_pending"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textSize="@dimen/_25sdp"
+                            app:font_type="@string/gotham_medium" />
+
+                        <hrms.hrms.widget.TextView
+                            style="@style/annual_leave_bottom_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pending_approved" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <hrms.hrms.widget.TextView
+            android:id="@+id/fragment_leave_tv_submit"
+            style="@style/btn_submit"
+            android:layout_alignParentBottom="true"
+            android:text="@string/next"
+            android:textAllCaps="true" />
+
+    </RelativeLayout>
+</layout>

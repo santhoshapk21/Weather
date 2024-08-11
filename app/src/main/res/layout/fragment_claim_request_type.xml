@@ -1,0 +1,112 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a000"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_155sdp"
+            android:layout_margin="@dimen/_24sdp"
+            android:background="#fff">
+
+            <ImageView
+                android:id="@+id/request_type_iv_close"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/ic_close_black"
+                app:tint="@color/login_tv_hint" />
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/tv_select_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/request_type_iv_close"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="Select your claim type"
+                android:textSize="@dimen/_14sdp"
+                app:font_type="@string/gotham_medium" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_select_text"
+                android:orientation="vertical"
+                android:padding="@dimen/_15sdp">
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<com.rey.material.widget.RadioButton-->
+                <!--android:id="@+id/cb_mark_attendance"-->
+                <!--style="@style/RadioButton.RequestDialog"-->
+                <!--/>-->
+
+                <!--<hrms.com.example.yudiz.hrms.widget.TextView-->
+                <!--android:id="@+id/tv_mark_attendance"-->
+                <!--style="@style/TextViewRequestDialog"-->
+                <!--android:text="Mark Attendance" />-->
+
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.rey.material.widget.RadioButton
+                        android:id="@+id/rb_travel_claim"
+                        style="@style/RadioButton.RequestDialog" />
+
+                    <hrms.hrms.widget.TextView
+                        android:id="@+id/tv_correction_request"
+                        style="@style/TextViewRequestDialog"
+                        android:text="@string/str_travel_claim"
+                        app:font_type="@string/gotham_book" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.rey.material.widget.RadioButton
+                        android:id="@+id/rb_other_claim"
+                        style="@style/RadioButton.RequestDialog" />
+
+                    <hrms.hrms.widget.TextView
+                        android:id="@+id/tv_regularize_Attendance"
+                        style="@style/TextViewRequestDialog"
+                        android:text="@string/str_other_claim"
+                        app:font_type="@string/gotham_book" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/dialog_tv_okey"
+                style="@style/Material.Drawable.Ripple.Wave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="@dimen/_17sdp"
+                android:text="@string/okey"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                app:font_type="@string/gotham_medium" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:clickable="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:orientation="vertical">
+
+
+        <hrms.hris365.calendar.TextViewCalendar
+            android:id="@+id/fullDateTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_4sdp"
+            android:text="15 Aug 2015"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/leftButton"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerVertical="true"
+                android:rotation="180"
+                android:src="@drawable/ic_keyboard_arrow_right_black" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/leftButton"
+                android:gravity="center_vertical"
+                android:tag="prev"
+                android:text="prev"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size"
+                app:font_type="@string/gotham"
+
+                />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:id="@+id/dateTitle"
+                style="@style/MonthTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:tag="dateTitle"
+                android:text="MONTH"
+
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size"
+                app:font_type="@string/medium" />
+
+            <hrms.hris365.calendar.TextViewCalendar
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/roboto_calendar_day_of_month_background_size"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/rightButton"
+                android:gravity="center_vertical"
+                android:tag="nxt"
+                android:text="next"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size"
+                app:font_type="@string/gotham" />
+
+            <ImageView
+                android:id="@+id/rightButton"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="false"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_keyboard_arrow_right_black" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <hrms.hrms.widget.TextView
+                    android:id="@+id/frg_request_regularize_details_tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_13sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:text="Privellage Leave"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_14sdp"
+                    app:font_type="@string/gotham_book" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+
+                <hrms.hrms.widget.CircleImageView
+                    android:id="@+id/frg_attendance_iv_image"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/ic_no_image"
+                    android:transitionName="@string/transition_user_image" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/frg_request_mark_attendance_details_ll_punch_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <hrms.hrms.widget.TextView
+                        android:id="@+id/frg_request_mark_attendance_details_tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@android:color/white"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_13sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:text="@string/str_punch_detail"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="@string/gotham_book" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="@dimen/_2sdp"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:gravity="center">
+
+                            <com.rey.material.widget.ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:src="@drawable/ic_calendar_dark" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_14sdp"
+                                android:orientation="vertical">
+
+                                <hrms.hrms.widget.TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_4sdp"
+                                    android:text="@string/date"
+                                    android:textColor="@color/request_leave_type_text"
+                                    android:textSize="@dimen/_9sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                                <hrms.hrms.widget.TextView
+                                    android:id="@+id/frg_request_mark_attendance_details_tv_from_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/_4sdp"
+                                    android:textColor="@color/request_leave_heading_text"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                            </LinearLayout>
+
+                            <com.rey.material.widget.ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_marginLeft="@dimen/_22sdp"
+                                android:src="@drawable/ic_clock_dark" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_16sdp"
+                                android:orientation="vertical">
+
+                                <hrms.hrms.widget.TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_4sdp"
+                                    android:text="@string/str_time"
+                                    android:textColor="@color/request_leave_type_text"
+                                    android:textSize="@dimen/_9sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                                <hrms.hrms.widget.TextView
+                                    android:id="@+id/frg_request_mark_attendance_details_tv_from_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/_4sdp"
+                                    android:textColor="@color/request_leave_heading_text"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/frg_request_mark_attendance_details_ll_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.rey.material.widget.ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:src="@drawable/ic_location"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/gray" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_request_mark_attendance_details_tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:paddingBottom="@dimen/_4sdp"
+                            android:paddingLeft="@dimen/_19sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:textColor="@color/request_leave_type_text"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_type="@string/gotham_book" />
+
+                    </LinearLayout>
+
+                    <hrms.hrms.widget.TextView
+                        android:id="@+id/frg_request_mark_attendance_details_tv_reson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/request_leave_type_text"
+                        android:textSize="@dimen/_11sdp"
+                        app:font_type="@string/gotham_book" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/frg_request_mark_attendance_details_ll_punch_out"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <hrms.hrms.widget.TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@android:color/white"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_13sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:text="@string/str_punch_out"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:font_type="@string/gotham_book" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="@dimen/_2sdp"
+                            android:layout_height="match_parent"
+                            android:background="@color/blue" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:gravity="center">
+
+                            <com.rey.material.widget.ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:src="@drawable/ic_calendar_dark" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_14sdp"
+                                android:orientation="vertical">
+
+                                <hrms.hrms.widget.TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_4sdp"
+                                    android:text="@string/str_from_date"
+                                    android:textColor="@color/request_leave_type_text"
+                                    android:textSize="@dimen/_9sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                                <hrms.hrms.widget.TextView
+                                    android:id="@+id/frg_request_mark_attendance_details_out_tv_from_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/_4sdp"
+                                    android:textColor="@color/request_leave_heading_text"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                            </LinearLayout>
+
+                            <com.rey.material.widget.ImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_marginLeft="@dimen/_22sdp"
+                                android:src="@drawable/ic_clock_dark" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_16sdp"
+                                android:orientation="vertical">
+
+                                <hrms.hrms.widget.TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_4sdp"
+                                    android:text="@string/str_to_date"
+                                    android:textColor="@color/request_leave_type_text"
+                                    android:textSize="@dimen/_9sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                                <hrms.hrms.widget.TextView
+                                    android:id="@+id/frg_request_mark_attendance_details_out_tv_from_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/_4sdp"
+                                    android:textColor="@color/request_leave_heading_text"
+                                    android:textSize="@dimen/_12sdp"
+                                    app:font_type="@string/gotham_book" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.rey.material.widget.ImageView
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:src="@drawable/ic_location"
+                            android:tint="@color/gray" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/frg_request_mark_attendance_details_out_tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_4sdp"
+                            android:paddingLeft="@dimen/_19sdp"
+                            android:paddingTop="@dimen/_4sdp"
+                            android:textColor="@color/request_leave_type_text"
+                            android:textSize="@dimen/_11sdp"
+                            app:font_type="@string/gotham_book" />
+
+                    </LinearLayout>
+
+                    <hrms.hrms.widget.TextView
+                        android:id="@+id/frg_request_mark_attendance_details_out_tv_reson"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/request_leave_type_text"
+                        android:textSize="@dimen/_11sdp"
+                        app:font_type="@string/gotham_book" />
+
+                </LinearLayout>
+
+                <hrms.hrms.widget.TextView
+                    android:id="@+id/frg_request_mark_attendace_details_tv_manager_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_40sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    app:font_type="@string/gotham_book" />
+
+                <hrms.hrms.widget.TextView
+                    android:id="@+id/frg_request_mark_attendance_details_tv_manager_reson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_40sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:textColor="@color/request_leave_type_text"
+                    android:textSize="@dimen/_11sdp"
+                    app:font_type="@string/gotham_book" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/frg_request_regularize_details_tv_cancel"
+                style="@style/Material.Drawable.Ripple.Wave"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="@string/str_cancel"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                app:font_type="@string/gotham_medium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

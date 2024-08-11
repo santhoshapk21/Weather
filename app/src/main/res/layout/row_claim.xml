@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:background="@color/home_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rr_request_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/row_claim_tv_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:text="13th Oct 2016"
+                android:textColor="@color/darkPrimaryFont"
+                android:textSize="@dimen/_12sdp"
+                app:font_type="@string/gotham_medium" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/view_line" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_4sdp">
+
+                    <LinearLayout
+                        android:id="@+id/row_claim_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/row_claim_tv_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:text="Travelling claim,"
+                            android:textColor="@color/extraDarkPrimaryFont"
+                            android:textSize="@dimen/_13sdp"
+                            app:font_type="@string/gotham_medium" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/row_claim_tv_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:layout_marginRight="@dimen/_16sdp"
+                            android:text="Rejected"
+                            android:textColor="#f00"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_type="@string/gotham_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/row_claim_ll"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="horizontal">
+
+                        <hrms.hrms.widget.TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Submitted:"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_type="@string/gotham_book" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/row_claim_tv_submitted"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="100"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_type="@string/gotham_book" />
+
+
+                        <hrms.hrms.widget.TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_16sdp"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:text="Approved:"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_type="@string/gotham_book" />
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/row_claim_tv_approved"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="100"
+                            android:textSize="@dimen/_10sdp"
+                            app:font_type="@string/gotham_book" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/row_shift_change_rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rr_request_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/row_shift_change_tv_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:padding="@dimen/_2sdp"
+                android:text="14:00 \n To \n 22:00"
+                android:textColor="@color/darkPrimaryFont"
+                android:textSize="@dimen/_11sdp"
+                app:font_type="@string/gotham_medium" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/view_line" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_4sdp">
+
+                    <LinearLayout
+                        android:id="@+id/row_shift_change_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <hrms.hrms.widget.TextView
+                            android:id="@+id/row_shift_change_tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First Shift"
+                            android:textColor="@color/extraDarkPrimaryFont"
+                            android:textSize="@dimen/_12sdp"
+                            app:font_type="@string/gotham_medium" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/row_shift_change_ll"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <hrms.hrms.widget.TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/from_date"
+                                android:textColor="#949494"
+                                android:textSize="@dimen/_10sdp"
+                                app:font_type="@string/gotham_medium" />
+
+
+                            <hrms.hrms.widget.TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/to_date"
+                                android:textColor="#949494"
+                                android:textSize="@dimen/_10sdp"
+                                app:font_type="@string/gotham_medium" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp">
+
+                            <hrms.hrms.widget.TextView
+                                android:id="@+id/row_shift_change_tv_from_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="10/10/2016"
+                                android:textColor="#949494"
+                                android:textSize="@dimen/_10sdp"
+                                app:font_type="@string/gotham_book" />
+
+                            <hrms.hrms.widget.TextView
+                                android:id="@+id/row_shift_change_tv_to_date"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="10/10/2016"
+                                android:textColor="#949494"
+                                android:textSize="@dimen/_10sdp"
+                                app:font_type="@string/gotham_book" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/row_shift_change_iv_edit"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:src="@drawable/ic_edit" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/row_emp_dir_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/home_bg">
+
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/row_chat_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_toLeftOf="@+id/row_chat_iv_user"
+                android:text="You"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp"
+                app:font_type="@string/gotham_medium" />
+
+            <hrms.hrms.widget.CircleImageView
+                android:id="@+id/row_chat_iv_user"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/img_user" />
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/row_chat_tv_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_chat_tv_title"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/row_chat_iv_user"
+                android:background="@drawable/rectangle"
+                android:padding="@dimen/_6sdp"
+                android:text="I will be on vacation for ladakh trip with friend and i will join new project after that"
+                android:textColor="@color/chat_text"
+                android:textSize="@dimen/_10sdp"
+                app:font_type="@string/gotham_book" />
+
+            <hrms.hrms.widget.TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/row_chat_tv_body"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:layout_toLeftOf="@+id/row_chat_iv_user"
+                android:padding="@dimen/_4sdp"
+                android:text="10:00 AM"
+                android:textColor="@color/chat_text_time"
+                android:textSize="@dimen/_8sdp"
+                app:font_type="@string/gotham_book" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

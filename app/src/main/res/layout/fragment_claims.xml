@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="@dimen/_12sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_claims_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/fragment_claims_rv_new_claims" />
+
+        <LinearLayout
+            android:id="@+id/frg_ll_no_data_claimlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <hrms.hrms.widget.TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_120sdp"
+                android:gravity="center"
+                android:text="@string/no_data"
+                android:textColor="@color/login_tv_hint"
+                android:textSize="@dimen/_20sdp"
+                app:font_type="@string/gotham_medium" />
+
+        </LinearLayout>
+
+        <com.andexert.library.RippleView
+            android:id="@+id/fragment_claims_rv_new_claims"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:rv_rippleDuration="200">
+
+            <hrms.hrms.widget.TextView
+                android:id="@+id/fragment_claims_tv_new_claims"
+                style="@style/btn_submit"
+                android:text="@string/new_claim"
+                android:textAllCaps="true" />
+        </com.andexert.library.RippleView>
+    </RelativeLayout>
+</layout>
