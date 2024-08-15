@@ -43,7 +43,7 @@ public class WebAPI {
             "api/Request/UploadExpenseImage",
             "api/Request/Detail"
     );
-    public static final String LOGIN = BASE_URL + "api/User/Login";
+    public static final String LOGIN = BASE_URL_2 + "api/User/Login";
 
     public static final String LOGOUT = BASE_URL + "api/User/Logout";
 

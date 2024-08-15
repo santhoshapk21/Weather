@@ -69,7 +69,7 @@ public class ApiTask {
 
     public Call<?> doLogin(String domain, String username, String password,
                            OnApiResponseListner onApiResponseListner) {
-        Call<ResponseLogin> doLogin = apiCall.doLogin(domain, username, password);
+        Call<ResponseLogin> doLogin = apiCall2.doLogin(domain, username, password);
         doLogin.enqueue(new ApiCallBack(onApiResponseListner, RequestCode.LOGIN));
         return doLogin;
     }
