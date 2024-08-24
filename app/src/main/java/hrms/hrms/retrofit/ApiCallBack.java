@@ -5,6 +5,8 @@ import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import hrms.hrms.activity.HomeActivity;
 import hrms.hrms.activity.LoginActivity;
 import hrms.hrms.baseclass.BaseAppCompactActivity;
@@ -28,8 +30,8 @@ public class ApiCallBack implements Callback {
 
     @Override
     public void onResponse(Call call, Response response) {
-        Log.e("ApiCallRequest:....",call.request().toString());
-        Log.e("ApiCallResponse:....",response.toString());
+        Log.e("ApiCallRequest:....","ApiCallRequest:...."+new Gson().toJson(call.request()));
+        Log.e("ApiCallResponse:....","ApiCallResponse:...."+new Gson().toJson(response.body()));
 
             if (isSuccessfull(response)) {
             if (onApiResponseListner != null)
@@ -78,7 +80,7 @@ public class ApiCallBack implements Callback {
 
     @Override
     public void onFailure(Call call, Throwable t) {
-
+        Log.e("ApiCallRequest:....","ApiCallRequestFail:...."+new Gson().toJson(call.request()));
         if (!BaseAppCompactActivity.isInternet)
             onApiResponseListner.onResponseError("No internet connection found.", requestCode);
         else if (onApiResponseListner != null && t.getMessage().equals("HTTP 204 had non-zero Content-Length: 29"))

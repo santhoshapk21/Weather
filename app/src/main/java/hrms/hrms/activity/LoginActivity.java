@@ -74,8 +74,8 @@ public class LoginActivity extends BaseAppCompactActivity implements
                 putString(TYPE.COMPANYNAME, user.getCompanyName());
                 putString(TYPE.COMPANYID, user.getCompanyID());
                 putString(TYPE.USERFULLNAME, user.getFullName());
-                //putBoolean(TYPE.ISGPSENABLE, user.isIsGpsEnable());
-                putBoolean(TYPE.ISGPSENABLE, true);
+                putBoolean(TYPE.ISGPSENABLE, user.isIsGpsEnable());
+                //putBoolean(TYPE.ISGPSENABLE, true);
                 putBoolean(TYPE.ISMANAGER, user.isIsManager());
                 doRegisterToken(getString(TYPE.ACCESSTOKEN),
 //                        FirebaseInstanceId.getInstance().getToken());

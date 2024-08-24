@@ -16,7 +16,10 @@ public class HttpClientProvider {
     public static OkHttpClient getOkHttpClient(Activity context) {
         try {
             // Load your certificate
-            InputStream caInput = context.getResources().openRawResource(R.raw.api_skillwill_live);
+            //Staging
+            //InputStream caInput = context.getResources().openRawResource(R.raw.api_skillwill_live);
+            //Live
+            InputStream caInput = context.getResources().openRawResource(R.raw.kpmanishapi1);
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
             X509Certificate ca = (X509Certificate) certificateFactory.generateCertificate(caInput);
             caInput.close();
@@ -26,7 +29,10 @@ public class HttpClientProvider {
                     .addTrustedCertificate(ca)
                     .build();
             CertificatePinner certificatePinner = new CertificatePinner.Builder()
-                    .add("api.skillwill.live", "sha256/fhkdaXUp6LrIfego/FaYhcMo8dEq34Mb0jGP/WeQO24=")
+                    //staging
+                    //.add("api.skillwill.live", "sha256/fhkdaXUp6LrIfego/FaYhcMo8dEq34Mb0jGP/WeQO24=")
+                    //live
+                    .add("hrms1.kpmanish.com", "sha256/tXYjojq5tz5AepSjpjbFIFLmhnp9gSZ7o4Dm6HpAcG8=")
                     .build();
             // Build the OkHttpClient
             return new OkHttpClient.Builder()
@@ -42,7 +48,10 @@ public class HttpClientProvider {
     public static OkHttpClient getOkHttpClient2(Activity context) {
         try {
             // Load your certificate
-            InputStream caInput = context.getResources().openRawResource(R.raw.api2_skillwill_live);
+            //staging
+            //InputStream caInput = context.getResources().openRawResource(R.raw.api2_skillwill_live);
+            //Live
+            InputStream caInput = context.getResources().openRawResource(R.raw.kpmanishapi2);
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
             X509Certificate ca = (X509Certificate) certificateFactory.generateCertificate(caInput);
             caInput.close();
@@ -52,7 +61,10 @@ public class HttpClientProvider {
                     .addTrustedCertificate(ca)
                     .build();
             CertificatePinner certificatePinner = new CertificatePinner.Builder()
-                    .add("api2.skillwill.live", "sha256/mgGOZnev2cnHFIHaGaUSlqi0JE5NrTdWJQpfekm62OU=")
+                    //staging
+                    //.add("api2.skillwill.live", "sha256/mgGOZnev2cnHFIHaGaUSlqi0JE5NrTdWJQpfekm62OU=")
+                    //live
+                    .add("hrms2.kpmanish.com", "sha256/tXYjojq5tz5AepSjpjbFIFLmhnp9gSZ7o4Dm6HpAcG8=")
                     .build();
             // Build the OkHttpClient
             return new OkHttpClient.Builder()

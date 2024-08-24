@@ -58,7 +58,8 @@ public abstract class BaseAppCompactActivity extends AppCompatActivity {
     private MobileDataStateChangedReceiver receiver;
     static OkHttpClient okHttpClient;
     static OkHttpClient okHttpClient2;
-    public static  Retrofit getRetrofitInstance() {
+
+    public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
 
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
@@ -78,19 +79,16 @@ public abstract class BaseAppCompactActivity extends AppCompatActivity {
                     return chain.proceed(builder.build());
                 }
             });
-            
+
             if (BuildConfig.DEBUG) {
                 HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
                 interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
                 httpClient.addInterceptor(interceptor);
-            }else{
+            } else {
                 HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
                 interceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
                 httpClient.addInterceptor(interceptor);
             }
-
-            OkHttpClient client = httpClient.build();
-
 
             retrofit = new Retrofit.Builder()
                     .baseUrl(WebAPI.BASE_URL)
@@ -101,7 +99,7 @@ public abstract class BaseAppCompactActivity extends AppCompatActivity {
         return retrofit;
     }
 
-    public static  Retrofit getRetrofitInstance2() {
+    public static Retrofit getRetrofitInstance2() {
         if (retrofit2 == null) {
 
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
@@ -126,14 +124,11 @@ public abstract class BaseAppCompactActivity extends AppCompatActivity {
                 HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
                 interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
                 httpClient.addInterceptor(interceptor);
-            }else{
+            } else {
                 HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
                 interceptor.setLevel(HttpLoggingInterceptor.Level.NONE);
                 httpClient.addInterceptor(interceptor);
             }
-
-            OkHttpClient client = httpClient.build();
-
 
             retrofit2 = new Retrofit.Builder()
                     .baseUrl(WebAPI.BASE_URL_2)
@@ -152,8 +147,8 @@ public abstract class BaseAppCompactActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         progressBarDialog = new ProgressBarDialog(this);
-         okHttpClient = HttpClientProvider.getOkHttpClient(BaseAppCompactActivity.this);
-         okHttpClient2 = HttpClientProvider.getOkHttpClient2(BaseAppCompactActivity.this);
+        okHttpClient = HttpClientProvider.getOkHttpClient(BaseAppCompactActivity.this);
+        okHttpClient2 = HttpClientProvider.getOkHttpClient2(BaseAppCompactActivity.this);
 
     }
 
@@ -170,7 +165,8 @@ public abstract class BaseAppCompactActivity extends AppCompatActivity {
     }
 
     public void dismissDialog() {
-        progressBarDialog.dismissDialog();
+        if (progressBarDialog != null)
+            progressBarDialog.dismissDialog();
     }
 
     protected void replaceFragment(Fragment mFragment, String title) {
@@ -188,8 +184,8 @@ public abstract class BaseAppCompactActivity extends AppCompatActivity {
             sb.setActionTextColor(getResources().getColor(R.color.white));
             View sbView = sb.getView();
             sbView.setBackgroundColor(getResources().getColor(R.color.red));
-           // TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
-           // textView.setTextColor(getResources().getColor(R.color.white));
+            // TextView textView = (TextView) sbView.findViewById(android.support.design.R.id.snackbar_text);
+            // textView.setTextColor(getResources().getColor(R.color.white));
             sb.show();
         } catch (Exception e) {
             e.printStackTrace();

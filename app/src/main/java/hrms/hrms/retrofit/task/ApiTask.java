@@ -87,7 +87,7 @@ public class ApiTask {
     }
 
     public Call<?> doGetProfile(String accessToken, OnApiResponseListner listner) {
-        Call<ResponseProfile> doGetProfile = apiCall.doGetProfile(accessToken);
+        Call<ResponseProfile> doGetProfile = apiCall2.doGetProfile(accessToken);
         doGetProfile.enqueue(new ApiCallBack(listner, RequestCode.PROFILE));
         return doGetProfile;
     }

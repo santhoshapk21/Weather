@@ -12,8 +12,10 @@ public class WebAPI {
 
     //    public static final String BASE_URL = " http://192.168.11.95:8086/";
 //    public static final String BASE_URL = "http://api.hris365.com/v5/";
-    public static final String BASE_URL = "https://api.skillwill.live/";
-    public static final String BASE_URL_2 = "https://api2.skillwill.live/";
+    //public static final String BASE_URL = "https://api.skillwill.live/";
+    //public static final String BASE_URL_2 = "https://api2.skillwill.live/";
+    public static final String BASE_URL = "https://hrms1.kpmanish.com/";
+    public static final String BASE_URL_2 = "https://hrms2.kpmanish.com/";
     private static final List<String> API_2_LIST = Arrays.asList(
             "api/Action/Approvals",
             "api/Action/GPSAttendance",
@@ -51,7 +53,7 @@ public class WebAPI {
 
     public static final String RESETPASSWORD = BASE_URL + "api/User/ResetPassword";
 
-    public static final String PROFILE = BASE_URL + "api/Profile/GetProfile";
+    public static final String PROFILE = BASE_URL_2 + "api/Profile/GetProfile";
 
     public static final String UPDATEPROFILE = BASE_URL + "api/Profile/Update";
 

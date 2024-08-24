@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -100,7 +101,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
         mBinding.fragmentNewClaimIvAddClaimDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              gotoClaimDetail();
+                gotoClaimDetail();
             }
         });
         mBinding.fragmentNewClaimLlPlane.setOnClickListener(new View.OnClickListener() {
@@ -137,7 +138,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                         Calendar start = Utility.getFormatedDate(mBinding.fragmentNewClaimTvFormDate.getText().toString().trim(), Constants.DATE_FORMAT1);
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
                         Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, end.get(Calendar.DAY_OF_MONTH),
-                                end.get(Calendar.MONTH), end.get(Calendar.YEAR), start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH),
+                                end.get(Calendar.MONTH), end.get(Calendar.YEAR), start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR),
                                 new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -148,14 +149,14 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
 
                                         String date1 = getFormattedDate(mCalendar);
                                         mBinding.fragmentNewClaimTvFormDate.setText(date1);
-                                        fromdate =getFormattedDate(mCalendar);
+                                        fromdate = getFormattedDate(mCalendar);
                                     }
                                 });
 
                     } else {
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
                         Utility.showDateDialogNew(getActivity(), 1, 1, cal.get(Calendar.YEAR) - 50, end.get(Calendar.DAY_OF_MONTH), end.get(Calendar.MONTH), end.get(Calendar.YEAR),
-                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                                         Calendar mCalendar = Calendar.getInstance();
@@ -173,7 +174,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                     if (!mBinding.fragmentNewClaimTvFormDate.getText().toString().trim().equals("")) {
                         Calendar start = Utility.getFormatedDate(mBinding.fragmentNewClaimTvFormDate.getText().toString().trim(), Constants.DATE_FORMAT1);
                         Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
-                                start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR), new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                                         Calendar mCalendar = Calendar.getInstance();
@@ -188,7 +189,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                                 });
                     } else {
                         Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
-                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                                         Calendar mCalendar = Calendar.getInstance();
@@ -216,7 +217,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
 
                         Utility.showDateDialogNew(getActivity(), start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
-                                end.get(Calendar.YEAR), end.get(Calendar.MONTH), end.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                end.get(Calendar.DAY_OF_MONTH), end.get(Calendar.MONTH), end.get(Calendar.YEAR), new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                                         Calendar mCalendar = Calendar.getInstance();
@@ -233,7 +234,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                         Calendar start = Utility.getFormatedDate(mBinding.fragmentNewClaimTvFormDate.getText().toString().trim(), Constants.DATE_FORMAT1);
 
                         Utility.showDateDialogNew(getActivity(), start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
-                                start.get(Calendar.YEAR), start.get(Calendar.MONTH), start.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                start.get(Calendar.DAY_OF_MONTH), start.get(Calendar.MONTH), start.get(Calendar.YEAR), new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                                         Calendar mCalendar = Calendar.getInstance();
@@ -252,7 +253,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                         Calendar end = Utility.getFormatedDate(mBinding.fragmentNewClaimTvToDate.getText().toString().trim(), Constants.DATE_FORMAT1);
 
                         Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
-                                end.get(Calendar.YEAR), end.get(Calendar.MONTH), end.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                end.get(Calendar.DAY_OF_MONTH), end.get(Calendar.MONTH), end.get(Calendar.YEAR), new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                                         Calendar mCalendar = Calendar.getInstance();
@@ -267,7 +268,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                                 });
                     } else {
                         Utility.showDateDialogNew(getActivity(), 1, 0, cal.get(Calendar.YEAR) - 50, cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR),
-                                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH), new android.app.DatePickerDialog.OnDateSetListener() {
+                                cal.get(Calendar.DAY_OF_MONTH), cal.get(Calendar.MONTH), cal.get(Calendar.YEAR), new android.app.DatePickerDialog.OnDateSetListener() {
                                     @Override
                                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                                         Calendar mCalendar = Calendar.getInstance();
@@ -367,6 +368,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
                         selectedmodeOfTravelID = modeOfTravel.getDetails().get(position).getId();
                         selectedmodeofTravelName = modeOfTravel.getDetails().get(position).getName();
                     }
+
                     @Override
                     public void onNothingSelected(AdapterView<?> parent) {
 
@@ -545,6 +547,7 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
         }
         return (date == null) ? "" : date;
     }
+
     private boolean checkValidation() {
         if (claimchoosentype == ClaimRequestType.TRAVELSELECTED) {
             if (modeOfTravel == null) {
@@ -594,32 +597,46 @@ public class NewClaimsFragment extends BaseFragment implements View.OnClickListe
             if (claimExpenseResponse != null) {
                 for (int i = 0; i < claimExpenseResponse.getDetails().get(0).getExpenses().size(); i++) {
                     if (!TextUtils.isEmpty(addClaimDetails.getExpenses().get(i).getAttachment())) {
-                        RequestBody id = RequestBody.create(MediaType.parse("text/plain"), claimExpenseResponse.getDetails().get(0).getExpenses().get(i).getTravelApplicationLineID());
+                        RequestBody id = RequestBody.create(MediaType.parse("text/plain"),
+                                claimExpenseResponse.getDetails().get(0).getExpenses().get(i).getTravelApplicationLineID());
                         File file = new File(addClaimDetails.getExpenses().get(i).getAttachment());
-                        MultipartBody.Part AttachmentImage = MultipartBody.Part.createFormData("Image", "Attachment" + claimExpenseResponse.getDetails().get(0).getExpenses().get(i).getTravelApplicationLineID(), RequestBody.create(MediaType.parse("image/*"), file));
+//                        MultipartBody.Part AttachmentImage = MultipartBody.Part.createFormData("Image",
+//                                "Attachment" + claimExpenseResponse.getDetails().get(0).getExpenses().get(i).getTravelApplicationLineID(),
+//                                RequestBody.create(MediaType.parse("image/*"), file));
+
+                        // Create RequestBody for the image file
+                        RequestBody imageBody = RequestBody.create(MediaType.parse("image/*"), file);
+
+// Create MultipartBody.Part for the image file
+                        MultipartBody.Part imagePart = MultipartBody.Part.createFormData(
+                                "Image",
+                                file.getName(), // Use file.getName() to get the actual file name
+                                imageBody
+                        );
                         ((HomeActivity) getActivity()).getApiTask().uploadAttachmentList(
-                                ((HomeActivity) getActivity()).getString(BaseAppCompactActivity.TYPE.ACCESSTOKEN), id, AttachmentImage
+                                ((HomeActivity) getActivity()).getString(BaseAppCompactActivity.TYPE.ACCESSTOKEN), id, imagePart
                                 , this);
                     }
                 }
 
-                if (onBackPressListerner != null) {
-                    onBackPressListerner.onBackPressListerner(addClaimDetails);
-                }
-                getActivity().onBackPressed();
+
             } else {
 
             }
             dismissDialog();
         } else if (requestCode == RequestCode.UPLOADCLAIMATTACHMENTIMAGE) {
-
+            if (onBackPressListerner != null) {
+                onBackPressListerner.onBackPressListerner(addClaimDetails);
+            }
+            getActivity().onBackPressed();
         }
     }
 
     @Override
     public void onResponseError(String errorMessage, int requestCode) {
-        ((HomeActivity) getActivity()).dismissDialog();
-        showSnackBar(errorMessage);
+        Log.e("onResponseError", "" + requestCode);
+        Log.e("onResponseError....", "" + errorMessage);
+        dismissDialog();
 //        if (requestCode == RequestCode.ADDCLAIMDETAILS) {
 //            getActivity().onBackPressed();
 //        }

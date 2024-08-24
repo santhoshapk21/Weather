@@ -42,11 +42,11 @@ public class SplashActivity extends BaseAppCompactActivity implements OnApiRespo
 //        Fabric.with(this, new Crashlytics());
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
 
-     //getCertificatePin();
+     getCertificatePin();
     }
 
     private void getCertificatePin() {
-        InputStream inputStream = getResources().openRawResource(R.raw.api2_skillwill_live);
+        InputStream inputStream = getResources().openRawResource(R.raw.kpmanishapi1);
         CertificateFactory certificateFactory = null;
         try {
             certificateFactory = CertificateFactory.getInstance("X.509");

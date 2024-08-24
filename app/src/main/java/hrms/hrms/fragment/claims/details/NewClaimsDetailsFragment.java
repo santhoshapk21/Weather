@@ -111,7 +111,9 @@ public class NewClaimsDetailsFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    if (cameraPermissions()){
                     dispatchTakePictureIntent();
+                    }
                 } else {
                     if (checkAndRequestPermissions(getActivity())) {
                         dispatchTakePictureIntent();
@@ -189,6 +191,21 @@ public class NewClaimsDetailsFragment extends BaseFragment {
         }
         return true;
     }
+    private boolean cameraPermissions() {
+        int cameraPermission = ContextCompat.checkSelfPermission(getActivity(),
+                Manifest.permission.CAMERA);
+        List<String> listPermissionsNeeded = new ArrayList<>();
+        if (cameraPermission != PackageManager.PERMISSION_GRANTED) {
+            listPermissionsNeeded.add(Manifest.permission.CAMERA);
+        }
+        if (!listPermissionsNeeded.isEmpty()) {
+            ActivityCompat.requestPermissions(getActivity(), listPermissionsNeeded
+                            .toArray(new String[listPermissionsNeeded.size()]),
+                    REQUEST_ID_MULTIPLE_PERMISSIONS);
+            return false;
+        }
+        return true;
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
@@ -218,7 +235,7 @@ public class NewClaimsDetailsFragment extends BaseFragment {
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         // Ensure that there's a camera activity to handle the intent
-        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+        //if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
             // Create the File where the photo should go
             File photoFile = null;
             try {
@@ -235,7 +252,7 @@ public class NewClaimsDetailsFragment extends BaseFragment {
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
             }
-        }
+        //}
     }
 
     private File createImageFile() throws IOException {
