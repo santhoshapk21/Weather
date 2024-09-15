@@ -106,11 +106,13 @@ public class DashBoaredFragment extends BaseFragment implements View.OnClickList
                             bundle.putBoolean("gpstype", gpstype);
                             bundle.putString("punchtype", punchtype);
                             bundle.putString("cityname", cityname);
-                            bundle.putDouble("lon", lon);
-                            //bundle.putDouble("lon", 72.585022);
-                            bundle.putDouble("lat", lat);
-                            //bundle.putDouble("lat", 23.033863);
-                            bundle.putDouble("radius", radius);
+                            if (lon !=null && lat!=null) {
+                                bundle.putDouble("lon", lon);
+                                //bundle.putDouble("lon", 72.585022);
+                                bundle.putDouble("lat", lat);
+                                //bundle.putDouble("lat", 23.033863);
+                                bundle.putDouble("radius", radius);
+                            }
                             //bundle.putDouble("radius", 5000);
                             bundle.putBoolean("isPresent", isPresent);
                             markAttanceFragment.setArguments(bundle);

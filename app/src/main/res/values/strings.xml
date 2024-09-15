@@ -75,8 +75,8 @@
     <string name="from_place">From Place</string>
     <string name="to_place">To Place</string>
     <string name="mode_of_travel">Mode Of Travel</string>
-    <string name="claim_details">Claim Details</string>
-    <string name="claim_type">Claim Type</string>
+    <string name="claim_details">Expense Details</string>
+    <string name="claim_type">Expense Type</string>
     <string name="amount">Amount</string>
     <string name="attachment">Attachment</string>
     <string name="air">Air</string>
@@ -84,7 +84,7 @@
     <string name="bus">Bus</string>
     <string name="car_bike">Car/Bike</string>
     <string name="attachment_ur_file">Attach Your File</string>
-    <string name="add_claim_Details">Add Claim Detail</string>
+    <string name="add_claim_Details">Add Expense Detail</string>
     <string name="log_in">LOG IN</string>
     <string name="enter_fromplace">Enter From Place</string>
     <string name="enter_toplace">Enter To Place</string>
@@ -253,7 +253,7 @@
     <string name="recieptno">Reciept No (Optional)</string>
     <string name="metro">Metro</string>
     <string name="non_metro">Non Metro</string>
-    <string name="str_travel_claim">Travel Claim</string>
+    <string name="str_travel_claim">Business Trip</string>
     <string name="str_other_claim">Other Claim</string>
     <string name="str_punch_detail">Punch Detail</string>
     <string name="effective_month_year">Effective Month - Year</string>
